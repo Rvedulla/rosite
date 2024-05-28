@@ -6,10 +6,15 @@ views = Blueprint('views', __name__)
 def home():
     return render_template('home.html')
 
-@views.route('/menu', methods=['GET', 'POST'])
-def menu():
-    return render_template('menu.html')
 
 @views.route('/about')
-def index():
+def about():
     return render_template('about.html')
+
+@views.route('/contact', methods=['GET', 'POST'])
+def contact():
+    return render_template('contact.html')
+
+@views.route('/resume')
+def resume():
+    return render_template('resume.html')
