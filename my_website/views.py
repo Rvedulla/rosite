@@ -15,6 +15,7 @@ def about():
 def contact():
     return render_template('contact.html')
 
-@views.route('/resume')
+@views.route('/resume') 
+# methods=['GET', 'POST'] add to line above maybe
 def resume():
     return render_template('resume.html')
