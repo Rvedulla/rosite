@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: auto;
+    margin: 50px;
+
+    .block{
+        display: block;
+        width: 100%;
+        padding: 80px 0; 
+        font-size: 18px; /* Increase font size */
+        margin: 10px 0; /* Margin between buttons */
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .block:hover {
+        background-color: #0056b3;
+    }
+
+    .button-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2 columns */
+        grid-gap: 10px; /* Gap between buttons */
+    }
+
+    .button-grid .block {
+        margin: 0; /* Remove default margin */
+    }
+    
+}
+h1.light-mode {
+    color: #333;
+}
+
+h1.dark-mode {
+    color: #f5f5f5;
+}
+
+#theme-toggler {
+    position: absolute;
+    top: 10px; /* Adjust the top distance as needed */
+    right: 10px; /* Adjust the right distance as needed */
+    z-index: 1000; /* Ensure the button appears above other elements */
+    
+}
+ 
+
+/* Light and Dark mode styles */
+:root {
+    --bg-color: white;
+    
+    --text-color: black;
+    --navbar-bg: #2a2a2a;
+    --navbar-text: white;
+}
+
+body.light-mode {
+    --bg-color: white;
+    --text-color: black;
+    --navbar-bg: #2a2a2a;
+    --navbar-text: white;
+}
+
+body.dark-mode {
+    --bg-color: #121212;
+   
+    --text-color: #e0e0e0;
+    --navbar-bg: #1f1f1f;
+    --navbar-text: #e0e0e0;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.navbar-custom {
+    background-color: var(--navbar-bg);
+}
+
+.navbar-custom .navbar-nav .nav-link {
+    color: var(--navbar-text);
+}
+

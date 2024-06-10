@@ -7,13 +7,13 @@ def home():
     return render_template('home.html')
 
 
-@views.route('/about')
+@views.route('/projects')
 def about():
-    return render_template('about.html')
+    return render_template('projects.html')
 
-@views.route('/contact', methods=['GET', 'POST'])
-def contact():
-    return render_template('contact.html')
+# @views.route('/contact', methods=['GET', 'POST'])
+# def contact():
+#     return render_template('contact.html')
 
 @views.route('/resume') 
 # methods=['GET', 'POST'] add to line above maybe
